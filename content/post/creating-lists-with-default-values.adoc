@@ -1,0 +1,14 @@
++++
+draft = false
+title = "Creating lists with default values"
+date = "2016-12-20T14:19:00+11:00"
++++
+
+To create a list with default values in Kotlin, you can use the following syntax:
+
+[code,kotlin]
+----
+IntArray(1000) { 0 }.asList()
+----
+
+Tested with Kotlin 1.0.2

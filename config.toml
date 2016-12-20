@@ -1,0 +1,13 @@
+languageCode = "en-us"
+baseurl = "https://bodiam.github.io/kotlin-tips/"
+title = "Kotlin Tips"
+
+[Params]
+  Author = "Erik Pragt"
+  GithubID = "bodiam"
+  TwitterID = "epragt"
+  AnalyticsID = "UA-89250523-1"
+  DisqusShortname = "kotlin-tips"
+  Summary = false  # takes true or false
+  Content = false  # takes true or false
+  FooterMsg = "Copyright 2016. Powered by Hugo."
