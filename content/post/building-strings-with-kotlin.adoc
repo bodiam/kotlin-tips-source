@@ -1,0 +1,31 @@
++++
+title = "Building strings with kotlin"
+draft = false
+date = "2016-12-21T23:08:20+11:00"
+
++++
+
+Creating new Strings in any JVM language is often slow and memory extensive. To prevent this, StringBuilders are introduced. To use them in Koltin, Kotlin introduced the `https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/build-string.html[buildString]` method. This is especially helpful when building bigger Strings.
+
+[source,kotlin]
+----
+val x = buildString {
+    append("Lucky numbers: ")
+    for (i in 1..10) {
+        append("${(Math.random() * 100).toInt()}, ")
+    }
+}
+
+fun main(args: Array<String>) {
+    println(x)
+}
+----
+
+Output:
+
+[source]
+----
+Lucky numbers: 37, 92, 47, 34, 33, 92, 98, 82, 51, 5,
+----
+
+Created with Kotlin 1.0.5-2

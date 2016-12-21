@@ -1,0 +1,36 @@
++++
+title = "Kotlin extension operators"
+draft = false
+date = "2016-12-22T00:33:25+11:00"
++++
+
+Kotlin allows classes to be extended using https://kotlinlang.org/docs/reference/extensions.html[Extension Functions]. These Extension Functions can also be used for extending operators if they are declared with the `operator` keyword.
+
+An example of such an Extension Function can be seen below, to draw a repeated set of characters.
+
+[source,kotlin]
+----
+operator fun Int.times(text: CharSequence): CharSequence {
+    val result = StringBuilder()
+
+    for (i in 1..this) {
+        result.append(text)
+    }
+
+    return result.toString()
+}
+
+fun main(args: Array<String>) {
+    val line = 10 * "x"
+
+    println(line)
+}
+----
+
+Running the script results in the output of a line consisting of x characters:
+
+----
+xxxxxxxxxx
+----
+
+Created with Kotlin 1.0.5-2
